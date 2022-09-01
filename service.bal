@@ -1,8 +1,11 @@
 import ballerina/http;
 
 
-configurable string test1 = ?;
-configurable string test2 = ?;
+configurable string dbUser = ?;
+configurable string dbHost = ?;
+configurable string dbDatabase = ?;
+configurable int dbPort = ?;
+configurable string dbPassword = ?;
 
 service / on new http:Listener(9090) {
 
@@ -13,6 +16,6 @@ service / on new http:Listener(9090) {
         if name is "" {
             return error("name should not be empty!");
         }
-        return "Hello, " + name+test1+test2;
+        return "Hello, " + name+dbUser+dbHost;
     }
 }

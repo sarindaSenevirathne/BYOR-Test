@@ -1,32 +1,46 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "properties": {
-      "sarindasatwso2com": {
-        "type": "object",
-        "properties": {
-          "byor2": {
-            "type": "object",
-            "properties": {
-              "test1": {
-                "type": "string",
-                "description": ""
-              },
-              "test2": {
-                "type": "string",
-                "description": ""
-              }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "sarindasatwso2com": {
+      "type": "object",
+      "properties": {
+        "byor2": {
+          "type": "object",
+          "properties": {
+            "dbUser": {
+              "type": "string",
+              "description": ""
             },
-            "additionalProperties": false,
-            "required": [
-              "test1",
-              "test2"
-            ]
-          }
-        },
-        "additionalProperties": false
-      }
-    },
-    "additionalProperties": false
-  }
-  
+            "dbHost": {
+              "type": "string",
+              "description": ""
+            },
+            "dbDatabase": {
+              "type": "string",
+              "description": ""
+            },
+            "dbPort": {
+              "type": "integer",
+              "description": ""
+            },
+            "dbPassword": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "dbUser",
+            "dbHost",
+            "dbDatabase",
+            "dbPort",
+            "dbPassword"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
